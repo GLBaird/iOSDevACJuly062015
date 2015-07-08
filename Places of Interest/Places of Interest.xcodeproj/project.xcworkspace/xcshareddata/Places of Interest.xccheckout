@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2EA3E97E-30B4-419A-8DF2-BF0CA50A0BEA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B51FBB5CC0747A61EEE83EC32DB31A1E42D84B30</key>
+		<string>https://github.com/GLBaird/iOSDevACJuly062015.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Places of Interest/Places of Interest.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B51FBB5CC0747A61EEE83EC32DB31A1E42D84B30</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/GLBaird/iOSDevACJuly062015.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B51FBB5CC0747A61EEE83EC32DB31A1E42D84B30</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B51FBB5CC0747A61EEE83EC32DB31A1E42D84B30</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSDevACJuly062015</string>
+		</dict>
+	</array>
+</dict>
+</plist>

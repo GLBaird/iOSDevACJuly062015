@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wHT-xK-1AX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome to iOS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hello_World" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,16 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to iOS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALK-3e-rhg">
-                                <rect key="frame" x="209" y="28" width="182" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="182" id="WzC-WY-CWW"/>
-                                    <constraint firstAttribute="height" constant="21" id="ur1-HV-j8E"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" red="0.23266178407535279" green="0.41617108836757366" blue="0.61863914695945943" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-zf-xSK">
                                 <rect key="frame" x="16" y="264" width="568" height="71"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,6 +56,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="D4a-zf-xSK" firstAttribute="top" secondItem="0h0-ci-4Hu" secondAttribute="bottom" constant="8" id="1mE-EU-CSh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9H3-yP-KgJ" secondAttribute="bottom" constant="20" id="HFS-sg-q85"/>
@@ -76,19 +67,62 @@
                             <constraint firstItem="0h0-ci-4Hu" firstAttribute="leading" secondItem="D4a-zf-xSK" secondAttribute="leading" id="QgV-Ix-0Ac"/>
                             <constraint firstItem="9H3-yP-KgJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="S1C-r2-LsG"/>
                             <constraint firstItem="D4a-zf-xSK" firstAttribute="trailing" secondItem="Aqf-pL-zk1" secondAttribute="trailing" id="TsH-K4-1O7"/>
-                            <constraint firstItem="ALK-3e-rhg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="f8g-U3-bfu"/>
                             <constraint firstAttribute="centerY" secondItem="D4a-zf-xSK" secondAttribute="centerY" id="gVe-80-mTQ"/>
-                            <constraint firstAttribute="centerX" secondItem="ALK-3e-rhg" secondAttribute="centerX" id="pdN-Hy-Wrm"/>
                             <constraint firstItem="D4a-zf-xSK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="r6p-8A-uvG"/>
                             <constraint firstItem="9H3-yP-KgJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="w8J-Xn-t3Z"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Welcome to iOS" id="g6p-IY-9XQ">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="LvQ-XD-ejE">
+                            <connections>
+                                <segue destination="MpE-3n-nl6" kind="show" id="n9V-5t-8wd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="label" destination="D4a-zf-xSK" id="kyV-Ss-L9u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1322" y="449"/>
+        </scene>
+        <!--Screen 2-->
+        <scene sceneID="sAa-UG-F68">
+            <objects>
+                <viewController id="MpE-3n-nl6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kis-Mw-7Zk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ww5-Sa-XPN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gJL-kO-k5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Screen 2" id="u2B-PB-KwI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kU1-kB-zAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2174" y="449"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gvg-MU-8Zh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wHT-xK-1AX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2RN-9U-boJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jAR-vC-gA3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THF-Sd-odf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="449"/>
         </scene>
     </scenes>
 </document>
