@@ -13,10 +13,23 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var storyboard:UIStoryboard?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+            storyboard = UIStoryboard(name: "iPhone", bundle: nil)
+        } else {
+            storyboard = UIStoryboard(name: "iPad", bundle: nil)
+        }
+        
+        window!.rootViewController = storyboard!.instantiateInitialViewController() as? UIViewController
+        window!.makeKeyAndVisible()
+        
         return true
     }
 

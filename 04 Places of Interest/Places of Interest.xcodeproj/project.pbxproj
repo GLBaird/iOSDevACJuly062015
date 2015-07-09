@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		35A22A661B4D42C300C7DD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A22A651B4D42C300C7DD0D /* AppDelegate.swift */; };
 		35A22A691B4D42C300C7DD0D /* Places_of_Interest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35A22A671B4D42C300C7DD0D /* Places_of_Interest.xcdatamodeld */; };
-		35A22A6B1B4D42C300C7DD0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A22A6A1B4D42C300C7DD0D /* ViewController.swift */; };
-		35A22A6E1B4D42C300C7DD0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A22A6C1B4D42C300C7DD0D /* Main.storyboard */; };
-		35A22A701B4D42C300C7DD0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A22A6F1B4D42C300C7DD0D /* Images.xcassets */; };
-		35A22A731B4D42C300C7DD0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35A22A711B4D42C300C7DD0D /* LaunchScreen.xib */; };
 		35A22A7F1B4D42C300C7DD0D /* Places_of_InterestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A22A7E1B4D42C300C7DD0D /* Places_of_InterestTests.swift */; };
 		35A22A891B4D475E00C7DD0D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A22A881B4D475E00C7DD0D /* Media.xcassets */; };
+		35A22A8F1B4D4A7A00C7DD0D /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A22A8E1B4D4A7A00C7DD0D /* iPhone.storyboard */; };
+		35A22A911B4D4A8400C7DD0D /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A22A901B4D4A8400C7DD0D /* iPad.storyboard */; };
+		35A22A931B4D79BF00C7DD0D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A22A921B4D79BF00C7DD0D /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +31,13 @@
 		35A22A641B4D42C300C7DD0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A22A651B4D42C300C7DD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35A22A681B4D42C300C7DD0D /* Places_of_Interest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Places_of_Interest.xcdatamodel; sourceTree = "<group>"; };
-		35A22A6A1B4D42C300C7DD0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		35A22A6D1B4D42C300C7DD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		35A22A6F1B4D42C300C7DD0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		35A22A721B4D42C300C7DD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		35A22A781B4D42C300C7DD0D /* Places of InterestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Places of InterestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A22A7D1B4D42C300C7DD0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A22A7E1B4D42C300C7DD0D /* Places_of_InterestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places_of_InterestTests.swift; sourceTree = "<group>"; };
 		35A22A881B4D475E00C7DD0D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		35A22A8E1B4D4A7A00C7DD0D /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		35A22A901B4D4A8400C7DD0D /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		35A22A921B4D79BF00C7DD0D /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,12 +80,11 @@
 			isa = PBXGroup;
 			children = (
 				35A22A651B4D42C300C7DD0D /* AppDelegate.swift */,
-				35A22A6A1B4D42C300C7DD0D /* ViewController.swift */,
-				35A22A6C1B4D42C300C7DD0D /* Main.storyboard */,
-				35A22A6F1B4D42C300C7DD0D /* Images.xcassets */,
+				35A22A8D1B4D49FB00C7DD0D /* Storyboards */,
+				35A22A8C1B4D49EF00C7DD0D /* View Controllers */,
+				35A22A8B1B4D49E900C7DD0D /* Models */,
+				35A22A8A1B4D49DF00C7DD0D /* Views */,
 				35A22A881B4D475E00C7DD0D /* Media.xcassets */,
-				35A22A711B4D42C300C7DD0D /* LaunchScreen.xib */,
-				35A22A671B4D42C300C7DD0D /* Places_of_Interest.xcdatamodeld */,
 				35A22A631B4D42C300C7DD0D /* Supporting Files */,
 			);
 			path = "Places of Interest";
@@ -116,6 +113,38 @@
 				35A22A7D1B4D42C300C7DD0D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35A22A8A1B4D49DF00C7DD0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		35A22A8B1B4D49E900C7DD0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35A22A921B4D79BF00C7DD0D /* Place.swift */,
+				35A22A671B4D42C300C7DD0D /* Places_of_Interest.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		35A22A8C1B4D49EF00C7DD0D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		35A22A8D1B4D49FB00C7DD0D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				35A22A8E1B4D4A7A00C7DD0D /* iPhone.storyboard */,
+				35A22A901B4D4A8400C7DD0D /* iPad.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,10 +227,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A22A6E1B4D42C300C7DD0D /* Main.storyboard in Resources */,
-				35A22A731B4D42C300C7DD0D /* LaunchScreen.xib in Resources */,
 				35A22A891B4D475E00C7DD0D /* Media.xcassets in Resources */,
-				35A22A701B4D42C300C7DD0D /* Images.xcassets in Resources */,
+				35A22A911B4D4A8400C7DD0D /* iPad.storyboard in Resources */,
+				35A22A8F1B4D4A7A00C7DD0D /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A22A6B1B4D42C300C7DD0D /* ViewController.swift in Sources */,
+				35A22A931B4D79BF00C7DD0D /* Place.swift in Sources */,
 				35A22A691B4D42C300C7DD0D /* Places_of_Interest.xcdatamodeld in Sources */,
 				35A22A661B4D42C300C7DD0D /* AppDelegate.swift in Sources */,
 			);
@@ -242,25 +270,6 @@
 			targetProxy = 35A22A791B4D42C300C7DD0D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		35A22A6C1B4D42C300C7DD0D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35A22A6D1B4D42C300C7DD0D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		35A22A711B4D42C300C7DD0D /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35A22A721B4D42C300C7DD0D /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		35A22A801B4D42C300C7DD0D /* Debug */ = {
@@ -350,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Places of Interest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Places of Interest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
