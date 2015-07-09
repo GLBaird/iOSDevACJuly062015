@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import MapKit
 
 
 let PlaceEntityName = "Place"
@@ -15,7 +16,7 @@ let PlaceAttributeName = "placeName"
 let PlaceAttributeDate = "dateVisited"
 
 
-class Place: NSManagedObject {
+class Place: NSManagedObject, MKAnnotation {
 
     @NSManaged var placeName: String
     @NSManaged var dateVisited: NSTimeInterval
@@ -23,6 +24,20 @@ class Place: NSManagedObject {
     @NSManaged var imagePath: String
     @NSManaged var geoLong: Double
     @NSManaged var geoLat: Double
+    
+    // MARK: - Mapkit Annotation values
+    
+    var coordinate:CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: geoLat, longitude: geoLong)
+    }
+    
+    var title:String {
+        return placeName
+    }
+    
+    var subtitle:String {
+        return "Visited on \(self.shortDateFormat)"
+    }
     
     // MARK: - Helper Methods
     

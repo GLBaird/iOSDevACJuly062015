@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class DetailViewController: UIViewController {
 
@@ -22,7 +23,20 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let place = self.place {
+            nameLabel.text = place.placeName
+            dateLabel.text = place.longDateFormat
+            descriptionTextView.text = place.placeDescription
+            placePreview.image = UIImage(contentsOfFile: NSHomeDirectory()+place.imagePath)
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        navigationController?.setToolbarHidden(false, animated: true)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        navigationController?.setToolbarHidden(true, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,11 +51,21 @@ class DetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "Map" {
+            let mapVC = segue.destinationViewController as! MapViewController
+            mapVC.mapPin = place
+        }
     }
     
     // MARK: - Actions
     
     @IBAction func postToSocial(sender: UIBarButtonItem) {
+        let service = sender.tag == 0 ? SLServiceTypeFacebook : SLServiceTypeTwitter
+        let post = SLComposeViewController(forServiceType: service)
+        post.setInitialText("I visited \(place!.placeName) on \(place!.shortDateFormat)")
+        post.addImage(UIImage(contentsOfFile: NSHomeDirectory()+place!.imagePath))
+        
+        presentViewController(post, animated: true, completion: nil)
     }
     
 

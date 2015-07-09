@@ -282,7 +282,7 @@
         <!--Map-->
         <scene sceneID="rMR-Tn-WRd">
             <objects>
-                <viewController id="qHY-Lz-PfU" sceneMemberID="viewController">
+                <viewController id="qHY-Lz-PfU" customClass="MapViewController" customModule="Places_of_Interest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rGJ-AT-ZXd"/>
                         <viewControllerLayoutGuide type="bottom" id="DVM-G4-phe"/>
@@ -305,12 +305,27 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="I3F-Tn-mxU"/>
-                        <barButtonItem title="Standard" id="qNn-P6-l8F"/>
-                        <barButtonItem title="Satellite" id="fAW-OO-gx5"/>
-                        <barButtonItem title="Hybrid" id="04v-7H-MqD"/>
+                        <barButtonItem title="Standard" id="qNn-P6-l8F">
+                            <connections>
+                                <action selector="changeMapType:" destination="qHY-Lz-PfU" id="XhU-2E-t2p"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem tag="1" title="Satellite" id="fAW-OO-gx5">
+                            <connections>
+                                <action selector="changeMapType:" destination="qHY-Lz-PfU" id="O3e-GF-RZy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem tag="2" title="Hybrid" id="04v-7H-MqD">
+                            <connections>
+                                <action selector="changeMapType:" destination="qHY-Lz-PfU" id="bpe-W8-L11"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="3TG-Dh-LMR"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Map" id="Szl-Kx-KmU"/>
+                    <connections>
+                        <outlet property="mapView" destination="gnz-RJ-Nlk" id="8Ph-Q1-eDx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSd-DN-KWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
