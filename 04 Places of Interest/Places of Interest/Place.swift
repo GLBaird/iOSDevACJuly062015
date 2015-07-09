@@ -9,6 +9,12 @@
 import Foundation
 import CoreData
 
+
+let PlaceEntityName = "Place"
+let PlaceAttributeName = "placeName"
+let PlaceAttributeDate = "dateVisited"
+
+
 class Place: NSManagedObject {
 
     @NSManaged var placeName: String
@@ -17,5 +23,38 @@ class Place: NSManagedObject {
     @NSManaged var imagePath: String
     @NSManaged var geoLong: Double
     @NSManaged var geoLat: Double
+    
+    // MARK: - Helper Methods
+    
+    var shortDateFormat:String {
+        return NSDateFormatter.localizedStringFromDate(
+            NSDate(timeIntervalSince1970: dateVisited),
+            dateStyle: .ShortStyle,
+            timeStyle: .NoStyle
+        )
+    }
+    
+    var longDateFormat:String {
+        return NSDateFormatter.localizedStringFromDate(
+            NSDate(timeIntervalSince1970: dateVisited),
+            dateStyle: .FullStyle,
+            timeStyle: .NoStyle
+        )
+    }
+    
+    func deleteImageFileIfExists() {
+        NSFileManager.defaultManager().removeItemAtPath(
+            NSHomeDirectory()+imagePath, error: nil)
+    }
 
 }
+
+
+
+
+
+
+
+
+
+

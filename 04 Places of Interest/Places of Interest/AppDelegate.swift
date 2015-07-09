@@ -14,6 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var storyboard:UIStoryboard?
+    
+    // MARK: - Class getter methods
+    
+    class func getDelegate() -> AppDelegate! {
+        return UIApplication.sharedApplication().delegate as? AppDelegate
+    }
+    
+    class func getContext() -> NSManagedObjectContext! {
+        return AppDelegate.getDelegate().managedObjectContext
+    }
+    
+    // MARK: - App delegate methods
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -89,7 +101,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
-            abort()
+            showAlert(
+                title: "Core Data Error",
+                message: "Cannot load context!\nReinstall App.",
+                button: "Cancel",
+                viewController: self.window?.rootViewController
+            )
         }
         
         return coordinator
@@ -115,7 +132,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // Replace this implementation with code to handle the error appropriately.
                 // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+                
+                showAlert(
+                    title: "Core Data Error",
+                    message: "Cannot save context!\nReinstall App.",
+                    button: "Cancel",
+                    viewController: window?.rootViewController
+                )
             }
         }
     }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		357AA1D81B4E83650069873A /* helper functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AA1D71B4E83650069873A /* helper functions.swift */; };
+		357AA1DA1B4E8E8C0069873A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AA1D91B4E8E8C0069873A /* AddViewController.swift */; };
+		357AA1DC1B4ED3A50069873A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AA1DB1B4ED3A50069873A /* DetailViewController.swift */; };
+		357AA1DE1B4ED3EF0069873A /* PlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AA1DD1B4ED3EF0069873A /* PlaceTableViewController.swift */; };
+		357AA1E01B4ED45D0069873A /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AA1DF1B4ED45D0069873A /* PlaceCell.swift */; };
 		35A22A661B4D42C300C7DD0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A22A651B4D42C300C7DD0D /* AppDelegate.swift */; };
 		35A22A691B4D42C300C7DD0D /* Places_of_Interest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35A22A671B4D42C300C7DD0D /* Places_of_Interest.xcdatamodeld */; };
 		35A22A7F1B4D42C300C7DD0D /* Places_of_InterestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A22A7E1B4D42C300C7DD0D /* Places_of_InterestTests.swift */; };
@@ -27,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		357AA1D71B4E83650069873A /* helper functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "helper functions.swift"; sourceTree = "<group>"; };
+		357AA1D91B4E8E8C0069873A /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		357AA1DB1B4ED3A50069873A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		357AA1DD1B4ED3EF0069873A /* PlaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewController.swift; sourceTree = "<group>"; };
+		357AA1DF1B4ED45D0069873A /* PlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		35A22A601B4D42C300C7DD0D /* Places of Interest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Places of Interest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A22A641B4D42C300C7DD0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A22A651B4D42C300C7DD0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				35A22A651B4D42C300C7DD0D /* AppDelegate.swift */,
+				357AA1D71B4E83650069873A /* helper functions.swift */,
 				35A22A8D1B4D49FB00C7DD0D /* Storyboards */,
 				35A22A8C1B4D49EF00C7DD0D /* View Controllers */,
 				35A22A8B1B4D49E900C7DD0D /* Models */,
@@ -118,6 +129,7 @@
 		35A22A8A1B4D49DF00C7DD0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				357AA1DF1B4ED45D0069873A /* PlaceCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -134,6 +146,9 @@
 		35A22A8C1B4D49EF00C7DD0D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				357AA1D91B4E8E8C0069873A /* AddViewController.swift */,
+				357AA1DB1B4ED3A50069873A /* DetailViewController.swift */,
+				357AA1DD1B4ED3EF0069873A /* PlaceTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -196,6 +211,7 @@
 				TargetAttributes = {
 					35A22A5F1B4D42C300C7DD0D = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = S5N6U6Z843;
 					};
 					35A22A771B4D42C300C7DD0D = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -247,9 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				357AA1DA1B4E8E8C0069873A /* AddViewController.swift in Sources */,
+				357AA1DE1B4ED3EF0069873A /* PlaceTableViewController.swift in Sources */,
 				35A22A931B4D79BF00C7DD0D /* Place.swift in Sources */,
 				35A22A691B4D42C300C7DD0D /* Places_of_Interest.xcdatamodeld in Sources */,
+				357AA1DC1B4ED3A50069873A /* DetailViewController.swift in Sources */,
+				357AA1D81B4E83650069873A /* helper functions.swift in Sources */,
 				35A22A661B4D42C300C7DD0D /* AppDelegate.swift in Sources */,
+				357AA1E01B4ED45D0069873A /* PlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Places of Interest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Places of Interest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,6 +453,7 @@
 				35A22A841B4D42C300C7DD0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35A22A851B4D42C300C7DD0D /* Build configuration list for PBXNativeTarget "Places of InterestTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +462,7 @@
 				35A22A871B4D42C300C7DD0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
