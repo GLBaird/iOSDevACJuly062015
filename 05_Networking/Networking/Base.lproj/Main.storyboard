@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="a7y-qx-YLP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Async-->
+        <scene sceneID="Ezs-oF-XH2">
+            <objects>
+                <viewController id="xC3-kC-0uA" customClass="AsyncViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Axb-kn-eu1"/>
+                        <viewControllerLayoutGuide type="bottom" id="O3E-tF-uDv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eY3-or-eVm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqE-Lw-UGC">
+                                <rect key="frame" x="0.0" y="0.0" width="325" height="568"/>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9a-CW-B3U">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="R37-03-Ypo"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Async" id="H82-uU-pz5"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7o-p6-Wfc">
+                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Aiw-9u-di3"/>
+                                    <barButtonItem title="Sync" id="3Un-hh-w4N">
+                                        <connections>
+                                            <action selector="syncDownloadImage:" destination="xC3-kC-0uA" id="alB-f5-38O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Async" id="Bkz-O2-tAJ">
+                                        <connections>
+                                            <action selector="asyncDownloadImage:" destination="xC3-kC-0uA" id="zyR-tu-iqS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="W7o-p6-Wfc" secondAttribute="trailing" constant="-16" id="NsM-ur-Z6Y"/>
+                            <constraint firstItem="mqE-Lw-UGC" firstAttribute="top" secondItem="eY3-or-eVm" secondAttribute="topMargin" id="TFA-xW-1xB"/>
+                            <constraint firstItem="k9a-CW-B3U" firstAttribute="leading" secondItem="eY3-or-eVm" secondAttribute="leadingMargin" constant="-16" id="Vmm-uI-bT7"/>
+                            <constraint firstItem="O3E-tF-uDv" firstAttribute="top" secondItem="W7o-p6-Wfc" secondAttribute="bottom" id="WnF-TM-oUO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mqE-Lw-UGC" secondAttribute="trailing" constant="-21" id="b07-24-iW7"/>
+                            <constraint firstItem="mqE-Lw-UGC" firstAttribute="bottom" secondItem="eY3-or-eVm" secondAttribute="bottomMargin" id="deW-Gn-8Sf"/>
+                            <constraint firstItem="mqE-Lw-UGC" firstAttribute="leading" secondItem="eY3-or-eVm" secondAttribute="leadingMargin" constant="-16" id="f3t-UE-25x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k9a-CW-B3U" secondAttribute="trailing" constant="-16" id="gNX-Fr-AeO"/>
+                            <constraint firstItem="k9a-CW-B3U" firstAttribute="top" secondItem="eY3-or-eVm" secondAttribute="topMargin" id="n6F-X0-Nsn"/>
+                            <constraint firstItem="W7o-p6-Wfc" firstAttribute="leading" secondItem="eY3-or-eVm" secondAttribute="leadingMargin" constant="-16" id="py0-ya-cYZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Async" image="Async" id="pT2-Zd-E4f"/>
+                    <connections>
+                        <outlet property="scrollView" destination="mqE-Lw-UGC" id="wdm-ta-Zun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ur8-rt-uOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="369"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="Spk-wE-jCc">
+            <objects>
+                <viewController id="ZS6-TU-BcJ" customClass="UploadViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dvw-Yl-XgJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="IFi-XE-vNq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5aZ-QF-j6k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" image="Upload" id="g0X-W7-LHr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QzQ-kJ-DWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="1004"/>
+        </scene>
+        <!--Download-->
+        <scene sceneID="4LE-9p-ian">
+            <objects>
+                <viewController id="oPi-7y-OmN" customClass="GetPostViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mWi-9I-flY"/>
+                        <viewControllerLayoutGuide type="bottom" id="fk0-hZ-Ott"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OAd-uI-iz2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRa-PW-pfe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="uRk-Ue-6Af"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="GET POST Parse" id="l4Y-2L-cY7"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9q-3d-PmW">
+                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="GET" id="Dte-w0-Ov9">
+                                        <connections>
+                                            <action selector="getRequest:" destination="oPi-7y-OmN" id="X5m-z4-mMC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="POST" id="tTZ-at-5zf">
+                                        <connections>
+                                            <action selector="postRequest:" destination="oPi-7y-OmN" id="FN8-dq-vfb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dgg-rs-qNW"/>
+                                    <barButtonItem title="JSON" id="TZN-qH-pHq">
+                                        <connections>
+                                            <action selector="jsonParse:" destination="oPi-7y-OmN" id="YWC-a8-NaM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="XML" id="f4W-d3-fPg">
+                                        <connections>
+                                            <action selector="xmlParse:" destination="oPi-7y-OmN" id="krh-oQ-y01"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="472-Uq-PPH">
+                                <rect key="frame" x="16" y="102" width="288" height="359"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVO-ZL-mii">
+                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oPi-7y-OmN" id="0rK-Ly-jFW"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eRa-PW-pfe" firstAttribute="leading" secondItem="OAd-uI-iz2" secondAttribute="leadingMargin" constant="-16" id="DPq-As-2kh"/>
+                            <constraint firstItem="lVO-ZL-mii" firstAttribute="top" secondItem="eRa-PW-pfe" secondAttribute="bottom" id="Daq-bk-U4n"/>
+                            <constraint firstItem="fk0-hZ-Ott" firstAttribute="top" secondItem="H9q-3d-PmW" secondAttribute="bottom" id="NaD-07-zaT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H9q-3d-PmW" secondAttribute="trailing" constant="-16" id="R1W-cg-k15"/>
+                            <constraint firstItem="H9q-3d-PmW" firstAttribute="leading" secondItem="OAd-uI-iz2" secondAttribute="leadingMargin" constant="-16" id="VVj-EC-fFH"/>
+                            <constraint firstItem="eRa-PW-pfe" firstAttribute="top" secondItem="OAd-uI-iz2" secondAttribute="topMargin" id="VY6-i8-qNK"/>
+                            <constraint firstItem="lVO-ZL-mii" firstAttribute="leading" secondItem="OAd-uI-iz2" secondAttribute="leadingMargin" constant="-16" id="aiK-Jv-y9d"/>
+                            <constraint firstItem="H9q-3d-PmW" firstAttribute="top" secondItem="472-Uq-PPH" secondAttribute="bottom" constant="14" id="cL1-aS-YmB"/>
+                            <constraint firstItem="472-Uq-PPH" firstAttribute="top" secondItem="lVO-ZL-mii" secondAttribute="bottom" constant="8" id="hb0-mM-Qj2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lVO-ZL-mii" secondAttribute="trailing" constant="-16" id="heY-3E-KKf"/>
+                            <constraint firstItem="472-Uq-PPH" firstAttribute="leading" secondItem="OAd-uI-iz2" secondAttribute="leadingMargin" id="i77-aR-NWo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eRa-PW-pfe" secondAttribute="trailing" constant="-16" id="pHF-3a-AVe"/>
+                            <constraint firstItem="472-Uq-PPH" firstAttribute="trailing" secondItem="OAd-uI-iz2" secondAttribute="trailingMargin" id="uog-ri-7Mf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Download" image="Get Post" id="vQt-f3-Png"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="lVO-ZL-mii" id="WAl-7A-Gun"/>
+                        <outlet property="textConsole" destination="472-Uq-PPH" id="alG-xp-dbX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFY-nZ-vfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="-261"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3Wr-hQ-fi9">
+            <objects>
+                <tabBarController id="a7y-qx-YLP" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="szt-To-nCu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oPi-7y-OmN" kind="relationship" relationship="viewControllers" id="kIO-Uq-uMY"/>
+                        <segue destination="xC3-kC-0uA" kind="relationship" relationship="viewControllers" id="bKE-fD-Gk7"/>
+                        <segue destination="ZS6-TU-BcJ" kind="relationship" relationship="viewControllers" id="0VG-dH-gYZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6KG-h4-za1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="541"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Async" width="33" height="33"/>
+        <image name="Get Post" width="33" height="33"/>
+        <image name="Upload" width="33" height="33"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
