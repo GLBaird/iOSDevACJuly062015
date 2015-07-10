@@ -82,10 +82,48 @@ class GetPostViewController: UIViewController,
     }
     
     @IBAction func postRequest(sender:AnyObject) {
+        let postURL = NSURL(string: apiServiceString)!
+        var postRequest = NSMutableURLRequest(URL: postURL)
         
+        // setup request
+        postRequest.HTTPMethod = "POST"
+        postRequest.setValue("application/x-www-form-urlencoded; charset=UTF-8",
+            forHTTPHeaderField: "Content-Type")
+        postRequest.HTTPBody = encodedURLVariables.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        postRequest.timeoutInterval = 20.0
+        
+        // sync call
+        var responseHeader:NSURLResponse?
+        var error:NSError?
+        var downloadedData = NSURLConnection.sendSynchronousRequest(
+            postRequest,
+            returningResponse: &responseHeader,
+            error: &error
+        )
+        
+        if let downloadedText = NSString(data: downloadedData!,
+            encoding: NSUTF8StringEncoding) as? String {
+                writeToConsole("Downloaded via post: " + downloadedText)
+        } else {
+            writeToConsole("Failed to download text via post")
+        }
     }
     
     @IBAction func jsonParse(sender:AnyObject) {
+        let jsonURL = NSURL(string: "http://leonbaird.co.uk/iphone/userdata.json")!
+        if let jsonData = NSData(contentsOfURL: jsonURL) {
+            let data = NSJSONSerialization.JSONObjectWithData(
+                jsonData,
+                options: NSJSONReadingOptions.MutableContainers,
+                error: nil) as! Dictionary<String, AnyObject>
+            
+            writeToConsole(data.description)
+            let users = data["users"] as! Array<Dictionary<String, AnyObject>>
+            let name = users[0]["name"] as! String
+            writeToConsole(name)
+        } else {
+            writeToConsole("Errors")
+        }
         
     }
 

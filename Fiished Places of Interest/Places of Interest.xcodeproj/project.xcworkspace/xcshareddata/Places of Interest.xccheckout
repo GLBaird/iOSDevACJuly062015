@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6A82C82A-55AF-46B9-86C6-55CD6BD22B47</string>
+	<string>16363DEC-F12F-4532-81C4-1F76F8546A3C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Networking</string>
+	<string>Places of Interest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B51FBB5CC0747A61EEE83EC32DB31A1E42D84B30</key>
 		<string>https://github.com/GLBaird/iOSDevACJuly062015.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>05_Networking/Networking.xcodeproj</string>
+	<string>Fiished Places of Interest/Places of Interest.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B51FBB5CC0747A61EEE83EC32DB31A1E42D84B30</key>
